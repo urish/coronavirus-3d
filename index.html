@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Coronavirus 3D</title>
+    <meta name="description" content="Coronavirus 3D" />
+    <meta name="author" content="Uri Shaked">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene background="color: black">
+      <a-sphere
+        position="0 1.25 -5"
+        radius="0.5"
+        color="red"
+        shadow
+        id="virus"
+      ></a-sphere>
+    </a-scene>
+    <script>
+      // 1 = 1000 Angstrom
+      const virus = document.getElementById('virus');
+
+      // https://www.researchgate.net/publication/6941179_Architecture_of_the_SARS_coronavirus_prefusion_spike
+      const numSpike = 65;
+      const virusRadius = 0.5;
+      const spikeRadius = 0.08;
+      const spikeCenter = virusRadius + spikeRadius;
+
+      for (let i = 0; i < numSpike; i++) {
+        const sphere = document.createElement('a-sphere');
+        sphere.setAttribute('color', 'orange');
+        sphere.setAttribute('shadow', 'shadow');
+        // https://stackoverflow.com/a/20852006/830623
+        const inc = Math.PI * (3 - Math.sqrt(5));
+        const off = 2 / numSpike;
+        const y = i * off - 1 + off / 2;
+        const r = Math.sqrt(1 - y * y);
+        const phi = i * inc;
+        sphere.setAttribute('position', {
+          x: Math.cos(phi) * r * spikeCenter,
+          y: y * spikeCenter,
+          z: Math.sin(phi) * r * spikeCenter
+        });
+        sphere.setAttribute('radius', spikeRadius);
+        virus.appendChild(sphere);
+      }
+    </script>
+  </body>
+</html>
