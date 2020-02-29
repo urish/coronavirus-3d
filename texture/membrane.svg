@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:export-ydpi="96"
+   inkscape:export-xdpi="96"
+   inkscape:export-filename="C:\P\corona-vr\texture\membrane.png"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 270.9333 270.9332"
+   height="1024"
+   width="1024"
+   sodipodi:docname="membrane.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <defs
+     id="defs2">
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:menu-tooltip="Basic noise fill texture; adjust color in Flood"
+       inkscape:menu="Overlays"
+       inkscape:label="Alpha Turbulent"
+       id="filter2715">
+      <feColorMatrix
+         result="fbSourceGraphic"
+         type="luminanceToAlpha"
+         id="feColorMatrix2693" />
+      <feFlood
+         flood-opacity="1"
+         result="result1"
+         flood-color="rgb(134,39,24)"
+         id="feFlood2695" />
+      <feComposite
+         result="result2"
+         operator="out"
+         in2="fbSourceGraphic"
+         id="feComposite2697" />
+      <feColorMatrix
+         in="result2"
+         result="fbSourceGraphic"
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 "
+         id="feColorMatrix2699" />
+      <feTurbulence
+         type="fractalNoise"
+         baseFrequency="0.433"
+         numOctaves="5"
+         id="feTurbulence2701" />
+      <feColorMatrix
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 -1.5 0 0 4.7 -1 "
+         result="result0"
+         id="feColorMatrix2703" />
+      <feFlood
+         result="result1"
+         flood-color="rgb(177,0,51)"
+         flood-opacity="1"
+         id="feFlood2705" />
+      <feBlend
+         result="result3"
+         in="result1"
+         mode="normal"
+         in2="fbSourceGraphic"
+         id="feBlend2707" />
+      <feComposite
+         result="result4"
+         operator="out"
+         in2="result0"
+         id="feComposite2709" />
+      <feComposite
+         operator="atop"
+         in2="fbSourceGraphic"
+         result="result5"
+         id="feComposite2711" />
+      <feComposite
+         in2="SourceGraphic"
+         operator="in"
+         id="feComposite2713" />
+      <feGaussianBlur
+         stdDeviation="1"
+         id="feGaussianBlur2725" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     inkscape:window-maximized="1"
+     inkscape:window-y="-8"
+     inkscape:window-x="-8"
+     inkscape:window-height="1137"
+     inkscape:window-width="1920"
+     units="px"
+     showgrid="false"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="mm"
+     inkscape:cy="654.7733"
+     inkscape:cx="1201.246"
+     inkscape:zoom="0.4949747"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-26.06675)">
+    <rect
+       style="opacity:1;fill:#800000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.2645833;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter2715)"
+       id="rect815"
+       width="270.9333"
+       height="270.9333"
+       x="0"
+       y="26.0668"
+       inkscape:export-xdpi="80"
+       inkscape:export-ydpi="80"
+       transform="matrix(1.031238,0,0,1.031238,-3.964498,-4.778785)" />
+  </g>
+</svg>

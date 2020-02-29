@@ -12,7 +12,7 @@
       <a-sphere
         position="0 1.25 -2"
         radius="0.5"
-        color="red"
+        material="color: red; src: texture/membrane.jpg; roughness: 0.7; metalness: 0.1"
         shadow
         id="virus"
         animation="property: rotation; to: 0 360 0; loop: true; dur: 10000; easing: linear"
@@ -26,19 +26,13 @@
       // https://www.researchgate.net/publication/6941179_Architecture_of_the_SARS_coronavirus_prefusion_spike
       const numSpike = 65;
       const virusRadius = 0.5;
-      const spikeHeight = 0.165;
-      const spikeRadius = 0.08;
-      const spikeCenter = virusRadius + spikeRadius;
 
       for (let i = 0; i < numSpike; i++) {
-        const spikeShape = document.createElement('a-cone');
-        spikeShape.setAttribute('color', 'orange');
-        spikeShape.setAttribute('shadow', 'shadow');
-        spikeShape.setAttribute('radius', spikeRadius);
-        spikeShape.setAttribute('height', spikeHeight);
-        spikeShape.setAttribute('radius-bottom', 0.001);
-        spikeShape.setAttribute('radius-top', spikeRadius);
+        const spikeShape = document.createElement('a-entity');
+        spikeShape.setAttribute('gltf-model', 'model/PDB-6VSB-surf.gltf');
+        spikeShape.setAttribute('color', 'red');
         spikeShape.setAttribute('rotation', { x: 90, y: 0, z: 0 });
+
         // https://stackoverflow.com/a/20852006/830623
         const inc = Math.PI * (3 - Math.sqrt(5));
         const off = 2 / numSpike;
@@ -51,7 +45,7 @@
         const spike = document.createElement('a-entity');
         const dir = z >= 0 ? -1 : 1;
         spike.appendChild(spikeShape);
-        spike.setAttribute('position', vect.multiplyScalar(spikeCenter));
+        spike.setAttribute('position', vect.multiplyScalar(virusRadius));
         const unitY = new THREE.Vector3(0, 1, 0);
         const unitX = new THREE.Vector3(1, 0, 0);
         spike.setAttribute('rotation', {
